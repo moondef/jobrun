@@ -1,6 +1,6 @@
 {
   "name": "jobrun",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple job runner for MongoDB",
   "main": "core.js",
   "repository": {
