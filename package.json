@@ -1,6 +1,6 @@
 {
   "name": "jobrun",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Simple job runner for MongoDB",
   "main": "core.js",
   "repository": "git@github.com:moondef/jobrunner.git",
@@ -8,5 +8,10 @@
   "license": "MIT",
   "dependencies": {
     "mongoose": "^5.4.18"
-  }
+  },
+  "keywords": [
+    "mongodb",
+    "jobrunner"
+  ],
+  "homepage": "https://github.com/moondef/jobrun#readme",
 }
