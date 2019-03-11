@@ -24,7 +24,7 @@ class JobRunner {
     const currJob = this.jobs.find(job => job.url === url);
     currJob.isRunning = true;
 
-    const interval = setInterval(currJob.cb, timeout);
+    const interval = setInterval(currJob.cb, timeout, currJob);
     currJob.interval = interval;
   }
 
@@ -33,7 +33,6 @@ class JobRunner {
     clearInterval(currJob.interval);
     currJob.isRunning = false;
   }
-
 }
 
 module.exports = JobRunner;
