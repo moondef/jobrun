@@ -1,7 +1,7 @@
 {
-  "name": "jobrunner",
+  "name": "jobrun",
   "version": "0.0.1",
-  "description": "jobrunner",
+  "description": "Simple job runner for MongoDB",
   "main": "core.js",
   "repository": "git@github.com:moondef/jobrunner.git",
   "author": "moondef <stpnsamko@gmail.com>",
