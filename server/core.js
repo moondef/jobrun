@@ -9,8 +9,7 @@ class JobRunner {
   createJob(url, cb) {
     const job = {
       url,
-      cb,
-      isDone: false
+      cb
     }
 
     this.jobs.push(job);
