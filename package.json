@@ -1,0 +1,12 @@
+{
+  "name": "jobrunner",
+  "version": "0.0.1",
+  "description": "jobrunner",
+  "main": "index.js",
+  "repository": "git@github.com:moondef/jobrunner.git",
+  "author": "moondef <stpnsamko@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "mongoose": "^5.4.18"
+  }
+}
