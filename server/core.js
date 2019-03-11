@@ -9,7 +9,8 @@ class JobRunner {
   createJob(url, cb) {
     const job = {
       url,
-      cb
+      cb,
+      isRunning: false
     }
 
     this.jobs.push(job);
@@ -21,6 +22,8 @@ class JobRunner {
 
   every(timeout, url) {
     const currJob = this.jobs.find(job => job.url === url);
+    currJob.isRunning = true;
+
     const interval = setInterval(currJob.cb, timeout);
     currJob.interval = interval;
   }
@@ -28,7 +31,9 @@ class JobRunner {
   stop(url) {
     const currJob = this.jobs.find(job => job.url === url);
     clearInterval(currJob.interval);
+    currJob.isRunning = false;
   }
+
 }
 
 module.exports = JobRunner;
