@@ -21,7 +21,13 @@ class JobRunner {
 
   every(timeout, url) {
     const currJob = this.jobs.find(job => job.url === url);
-    setInterval(currJob.cb, timeout);
+    const interval = setInterval(currJob.cb, timeout);
+    currJob.interval = interval;
+  }
+
+  stop(url) {
+    const currJob = this.jobs.find(job => job.url === url);
+    clearInterval(currJob.interval);
   }
 }
 

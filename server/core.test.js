@@ -22,6 +22,12 @@ myJb.createJob('delete Stas Ivanov', (job, done) => {
 });
 
 (async () => {
-  await myJb.start()
-  await myJb.every(5000, 'delete Stas Ivanov')
+  await myJb.start();
+
+  await myJb.every(5000, 'delete Stas Ivanov');
+
+  setTimeout(() => {
+    myJb.stop('delete Stas Ivanov');
+    console.log('stopped');
+  }, 15000);
 })();
