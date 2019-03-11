@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "Simple job runner for MongoDB",
   "main": "core.js",
-  "repository": "git@github.com:moondef/jobrunner.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/moondef/jobrun.git"
+  },
   "author": "moondef <stpnsamko@gmail.com>",
   "license": "MIT",
   "dependencies": {
@@ -13,5 +16,8 @@
     "mongodb",
     "jobrunner"
   ],
-  "homepage": "https://github.com/moondef/jobrun#readme",
+  "bugs": {
+    "url": "https://github.com/moondef/jobrun/issues"
+  },
+  "homepage": "https://github.com/moondef/jobrun#readme"
 }
