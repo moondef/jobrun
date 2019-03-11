@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-class JobRunner {
+class JobRun {
   constructor(dbLink) {
     this.dbLink = dbLink;
     this.jobs = [];
@@ -35,4 +35,4 @@ class JobRunner {
   }
 }
 
-module.exports = JobRunner;
+module.exports = JobRun;

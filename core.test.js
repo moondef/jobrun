@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const JobRunner = require('./core');
+const JobRun = require('./core');
 
 const { Schema, model } = mongoose;
 
@@ -13,7 +13,7 @@ const userShema = new Schema({
 const User = model('User', userShema);
 
 // init runner
-const myJb = new JobRunner('mongodb://localhost:27017/jobrunner');
+const myJb = new JobRun('mongodb://localhost:27017/jobrunner');
 
 const DELETE_STAS = 'delete Stas Ivanov';
 const CREATE_RANDOM_USER = 'create a random user';
