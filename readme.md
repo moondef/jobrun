@@ -17,26 +17,15 @@ const dbLink = 'mongodb://localhost:27017/jobrunner';
 
 const myJb = new JobRun(dbLink);
 
-const CREATE_RANDOM_USER = 'create a random user';
+const DELETE_UNACTIVE_USERS = 'delete unactive users';
 
-myJb.createJob(CREATE_RANDOM_USER, () => {
-  const newUser = new User({
-    name: Math.random().toString(),
-    type: 'user',
-    date: Math.random().toString(),
-  });
-
-  newUser.save();
+myJb.createJob(DELETE_UNACTIVE_USERS, () => {
+  User.remove({lastLogIn: {$lt: yourDate}}
 });
 
 (async () => {
   await myJb.start();
-  await myJb.every(3000, CREATE_RANDOM_USER);
-  
-  setTimeout(() => {
-    myJb.stop(CREATE_RANDOM_USER);
-    console.log('stopped');
-  }, 15000);
+  await myJb.every(3000, DELETE_UNACTIVE_USERS);
 })();
 ```
 
