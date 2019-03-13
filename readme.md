@@ -20,7 +20,7 @@ const myJb = new JobRun(dbLink);
 const DELETE_UNACTIVE_USERS = 'delete unactive users';
 
 myJb.createJob(DELETE_UNACTIVE_USERS, () => {
-  User.remove({lastLogIn: {$lt: yourDate}}
+  User.remove({lastLogIn: {$lt: yourDate}});
 });
 
 (async () => {
